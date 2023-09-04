@@ -1,6 +1,7 @@
 package com.hangman.api.controller;
 
 import com.hangman.api.model.CreateRoom;
+import com.hangman.api.model.GameInstance;
 import com.hangman.api.service.RoomService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -13,8 +14,7 @@ public class RoomController {
     private final RoomService roomService;
 
     @PostMapping("create")
-    public CreateRoom createRoom(@RequestBody CreateRoom createRoom) {
-        // todo
-        return null;
+    public GameInstance createRoom(@RequestBody CreateRoom createRoom) {
+        return roomService.createRoom(createRoom);
     }
 }
