@@ -15,13 +15,11 @@ public class GameController {
 
     @PostMapping("{roomId}")
     public GuessResponse guess(@RequestBody GuessRequest guessRequest, @PathVariable String roomId) {
-        // todo call service
-        return null;
+        return gameService.guess(guessRequest, roomId);
     }
 
     @GetMapping("{roomId}")
     public GameInstanceDTO getGame(@PathVariable String roomId) {
-        // TODO CALL SERVICE & MAPPER
-        return null;
+        return gameService.findById(roomId);
     }
 }

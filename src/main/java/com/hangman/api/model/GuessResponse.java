@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class GuessResponse {
-    private Boolean hasGuessed;
+    private Boolean correctGuessed;
+    private Boolean gameEnded;
     private Long guessesLeft;
 }
