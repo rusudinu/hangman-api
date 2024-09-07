@@ -57,3 +57,6 @@ In the case of an incorrect guess:
   "guessesLeft": 1
 }
 ```
+
+If the user won the game, the gameEnded field will be true.
+If the number in guessesLeft is <= 0 then the game should be ended. (i.e. no longer allow the player to make guesses). Be aware that the gameEnded field will stay false in this case.
