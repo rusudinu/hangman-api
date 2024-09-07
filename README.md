@@ -8,12 +8,11 @@ Swagger can be found [here](http://localhost:8080/swagger-ui/index.html).
 ## How the API works
 
 1. You fill first need to create a room. For this you should use the POST /api/v1/room/create endpoint. This received a json object with the word you want to use for the game as well as the number of
-   guesses you want to allow. The response will contain the room id.
+   guesses you want to allow. The response will contain the room id. Note that the id will be automatically added by the backend so you can leave it out or null if you want.
 
 ```json
 {
   "id": "string",
-  // this will be automatically added by the backend so you can leave it like this
   "word": "test",
   "allowedGuesses": 2
 }
